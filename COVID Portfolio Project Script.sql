@@ -3,29 +3,33 @@ FROM PortfolioProject..CovidDeaths
 WHERE continent IS NOT NULL
 ORDER BY 3,4
 
---Select *
---From PortfolioProject..CovidVaccinations
---order by 3,4
+--SELECT *
+--FROM PortfolioProject..CovidVaccinations
+--ORDER BY 3,4
 
--- Select Data that is going to be used
+
+-- Looking at Total Cases vs. Total Deaths
 
 SELECT Location, date, total_cases, new_cases, total_deaths, population
 FROM PortfolioProject..CovidDeaths
 ORDER BY 1,2
 
--- Looking at Total Cases vs. Total Deaths
+
 -- Shows the likelihood of dying if one has been infected
+
 SELECT Location, date, total_cases, total_deaths, (total_deaths/total_cases)*100 as DeathPercentage
 FROM PortfolioProject..CovidDeaths
 WHERE Location like '%states'
 ORDER BY 1,2
 
--- Looking at Total Cases vs. Population
--- Shows percentage of population that got COVID-19
+
+-- Looking at Total Cases vs. Population & Percentage of Population that got COVID-19
+
 SELECT Location, date, population, total_cases, (total_cases/population)*100 as PercentInfected
 FROM PortfolioProject..CovidDeaths
 WHERE Location like '%states'
 ORDER BY 1,2
+
 
 -- Looking at Countries with Highest Infection Rate compared to Population
 
@@ -34,6 +38,7 @@ FROM PortfolioProject..CovidDeaths
 --Where Location like '%states'
 GROUP BY Location, population
 ORDER BY PercentInfected DESC
+
 
 -- Showing Countries with Highest Death Count per Population
 
@@ -44,7 +49,8 @@ WHERE continent IS NOT NULL
 GROUP BY Location
 ORDER BY TotalDeathCount DESC
 
--- LET'S BREAK THINGS DOWN BY CONTINENT
+
+-- Same as above, but by Continent
 
 SELECT continent, MAX(cast(total_deaths AS int)) as TotalDeathCount
 FROM PortfolioProject..CovidDeaths
@@ -52,6 +58,7 @@ FROM PortfolioProject..CovidDeaths
 WHERE continent IS NOT NULL
 GROUP BY continent
 ORDER BY TotalDeathCount DESC
+
 
 -- Showing Continents with the Highest Death Count per Population
 
@@ -62,7 +69,8 @@ WHERE continent IS NOT NULL
 GROUP BY continent
 ORDER BY TotalDeathCount DESC
 
--- GLOBAL NUMBERS (time 43:35)
+
+-- Numbers for Worldwide Data
 
 SELECT SUM(new_cases) as total_cases, SUM(cast(new_deaths AS int)) as total_deaths, SUM(cast(new_deaths AS int))/SUM(new_cases)*100 AS DeathPercentage
 FROM PortfolioProject..CovidDeaths
@@ -73,7 +81,6 @@ ORDER BY 1,2
 
 
 -- Looking at Total Population vs. Vaccinations
-
 
 SELECT dea.continent, dea.Location, dea.date, dea.population, vac.new_vaccinations,
 SUM(CONVERT(int, vac.new_vaccinations)) OVER (PARTITION BY dea.Location ORDER BY dea.Location, dea.date) as RollingPeopleVaccinated,
@@ -86,7 +93,7 @@ WHERE dea.continent IS NOT NULL
 ORDER BY 2,3
 
 
--- USE CTE
+-- Using CTE
 
 WITH PopvsVac (continent, Location, date, population, new_vaccinations, RollingPeopleVaccinated) as
 (
