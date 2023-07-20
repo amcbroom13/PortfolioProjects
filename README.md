@@ -11,6 +11,7 @@ This is a guided project that takes Excel data containing [COVID-19 Deaths](Covi
 
 **Click** [this link](https://public.tableau.com/views/COVID-19Dashboard_16829717833540/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link) **to view the Tableau Dashboard for this project.**
 
+
 # [Project #2: Exploratory Data Analysis on Video Game Sales over 4 Decades](https://github.com/amcbroom13/PortfolioProjects/blob/main/Exploratory%20Data%20Analysis%20on%20Video%20Game%20Sales.ipynb)
 
 This Python project, using Jupyter Notebook, aims to answer questions about video games' economic impact through cleaning, sorting, and visualizing [video game sales data](vgsales.csv).
@@ -20,11 +21,11 @@ This Python project, using Jupyter Notebook, aims to answer questions about vide
 - Used over 4 visualization types to analyze sales data by Genre and Year
 - Identified the number of Games Made by Publishers and Genre for each decade
 
-# [Project #3: Genshin Impact Character Analysis - WIP](https://github.com/amcbroom13/PortfolioProjects/blob/main/Genshin%20Character%20List%20query%20(Data%20Cleaning%20%26%20Exploration).sql)
 
-This project takes Excel data and uses SQL & Tableau to explore Genshin Impact's both current and upcoming characters.
+# [Project #3: King County House Sales](https://public.tableau.com/views/KingCountyHouseSales_16896489418100/KingCountyHouseSales?:language=en-US&:display_count=n&:origin=viz_share_link)
 
-
-# [Project #4: Bay Area House Sales Dashboard - WIP]()
-
-This Tableau project takes Bay Area house sales data from Excel to create visualizations that illustrate the current housing market at different points in time.
+This Tableau project takes King County, WA [house sales data](HouseData.xlsx) from Excel to create visualizations that illustrate the current housing market at different points in time.
+- Displays the Average & Distribution of Housing Prices alongside features such as bedrooms and bathrooms
+- Compared house view and condition to show the average pricing of houses in certain qualities
+- Implemented a calendar filter to view data by Month and Day
+- Created 3 adjustable range filters that lets users change the Year Built, sqft of the Living Area, and Total sqft
