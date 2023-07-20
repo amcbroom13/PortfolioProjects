@@ -13,7 +13,7 @@ This is a guided project that takes Excel data containing [COVID-19 Deaths](Covi
 
 # [Project #2: Exploratory Data Analysis on Video Game Sales over 4 Decades](https://github.com/amcbroom13/PortfolioProjects/blob/main/Exploratory%20Data%20Analysis%20on%20Video%20Game%20Sales.ipynb)
 
-This Python project, using Jupyter Notebook, aims to answer questions about video games' economic impact through cleaning, sorting, and visualizing video game sales data.
+This Python project, using Jupyter Notebook, aims to answer questions about video games' economic impact through cleaning, sorting, and visualizing [video game sales data](vgsales.csv).
 - Imported Pandas, Numpy, MatPlotLib, and Seaborn libraries to assist with cleaning, sorting, and visualizing data
 - Cleaned data by removing 300+ null rows, converting certain variables, and replacing incorrect information
 - Viewed Top 10 games by Global Sales alongside the Top 5 games by sales in North America, Japan, and Europe
