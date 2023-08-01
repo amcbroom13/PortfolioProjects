@@ -1,9 +1,8 @@
 # Anthony's Portfolio Projects
+All documented projects, using programs like Excel, SQL, Tableau, and/or Python. All Tableau visualizations can be viewed at [this link](https://public.tableau.com/app/profile/amcbroom13).
 
 # [Project #1: COVID-19 Explorative Analysis](https://github.com/amcbroom13/PortfolioProjects/blob/main/COVID%20Portfolio%20Project%20Script.sql)
 This is a guided project that takes Excel data containing [COVID-19 Deaths](CovidDeaths.xlsx) & [Vaccinations](CovidVaccinations.xlsx) and uses SQL and Tableau that takes a deep dive at worldwide COVID-19 data to gain an understanding of the effects it had over time.
-
-**Click** [this link](https://public.tableau.com/views/COVID-19Dashboard_16829717833540/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link) **to view the Tableau Dashboard for this project.**
 
 
 # [Project #2: Exploration of Video Game Sales](https://github.com/amcbroom13/PortfolioProjects/blob/main/Exploratory%20Data%20Analysis%20on%20Video%20Game%20Sales.ipynb)
@@ -15,5 +14,4 @@ This Tableau project takes King County, WA [house sales data](HouseData.xlsx) fr
 
 
 # [Project #4: Cleaning Nashville Housing Data](https://github.com/amcbroom13/PortfolioProjects/blob/main/Data%20Cleaning%20Portfolio%20Project.sql)
-
 A SQL-only project that cleans sample data of housing information in Nashville, TN.
